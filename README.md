@@ -1,5 +1,6 @@
 # IrohAsm2
-*The second-generation Iroh CPU Assembler.*😎
+*The second-generation Iroh CPU Assembler.*
+😎
 
 This is an assembler that I wrote with ANTLR because rewriting regexes was getting too hard for me. The original can be found [here](https://github.com/why-does-ie-still-exist/IrohAsm).
 Because I used ANTLR, adding support for data ranges was much easier, as was writing much more brief, clean code!
