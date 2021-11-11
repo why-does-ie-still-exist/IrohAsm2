@@ -7,12 +7,12 @@ import java.util.HashMap;
 public class OffsetCalcListener extends IrohAsmBaseListener {
   IrohAsmParser parser;
   private int numInstructions;
-  private HashMap<String, Operand> labels;
+  private final HashMap<String, Operand> labels;
 
   public OffsetCalcListener(IrohAsmParser parser) {
     this.numInstructions = 0;
     this.parser = parser;
-    this.labels = new HashMap<String,Operand>();
+    this.labels = new HashMap<String, Operand>();
   }
 
   public int getNumInstructions() {

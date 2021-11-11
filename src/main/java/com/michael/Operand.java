@@ -58,12 +58,11 @@ public class Operand {
       if (s.charAt(0) == '+' || s.charAt(0) == '-') {
         try {
           String bitString;
-          if(hasRadix){
+          if (hasRadix) {
             bitString =
-                Integer.toBinaryString(Integer.parseInt(s.substring(0, s.length() - 1),radix));
+                Integer.toBinaryString(Integer.parseInt(s.substring(0, s.length() - 1), radix));
           } else {
-            bitString =
-                Integer.toBinaryString(Integer.parseInt(s,radix));
+            bitString = Integer.toBinaryString(Integer.parseInt(s, radix));
           }
           bitString =
               s.charAt(0) == '+'
@@ -79,7 +78,7 @@ public class Operand {
       } else {
         try {
           this.type = 'i';
-          if(hasRadix){
+          if (hasRadix) {
             this.value = (char) Integer.parseInt(s.substring(0, s.length() - 1), radix);
           } else {
             this.value = (char) Integer.parseInt(s, radix);

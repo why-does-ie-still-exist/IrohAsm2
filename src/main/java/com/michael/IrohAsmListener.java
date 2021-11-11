@@ -13,9 +13,9 @@ import java.util.HashMap;
 import org.antlr.v4.misc.OrderedHashMap;
 
 public class IrohAsmListener extends IrohAsmBaseListener {
-  private OrderedHashMap<String, DataRange> dataranges;
-  private ArrayList<Instruction> instructions;
-  private HashMap<String, Operand> labels;
+  private final OrderedHashMap<String, DataRange> dataranges;
+  private final ArrayList<Instruction> instructions;
+  private final HashMap<String, Operand> labels;
   private int startingAddress;
 
   public IrohAsmListener(int dataOffset, HashMap<String, Operand> labels) {

@@ -50,21 +50,28 @@ public class Instruction {
     }
   }
 
+  public static String getInstructionId(String mnemonic) {
+    switch (mnemonic.toLowerCase(Locale.ROOT).trim()) {
+      case "add":
+        return "1000";
+      case "sub":
+        return "1001";
+      case "mov":
+        return "0000";
+      case "jmp":
+        return "0001";
+      case "jez":
+        return "0010";
+      case "get":
+        return "0011";
+      case "wrt":
+        return "0100";
+    }
+    throw new IllegalArgumentException("mnemonic not a valid mnemonic.");
+  }
+
   @Override
   public String toString() {
     return orderString + regNum + instructionID + value;
-  }
-
-  public static String getInstructionId(String mnemonic) {
-    switch (mnemonic.toLowerCase(Locale.ROOT).trim()){
-      case "add" : return "1000";
-      case "sub" : return "1001";
-      case "mov" : return "0000";
-      case "jmp" : return "0001";
-      case "jez" : return "0010";
-      case "get" : return "0011";
-      case "wrt" : return "0100";
-    }
-    throw new IllegalArgumentException("mnemonic not a valid mnemonic.");
   }
 }

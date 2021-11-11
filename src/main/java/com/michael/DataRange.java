@@ -5,10 +5,11 @@ import java.util.ArrayList;
 public class DataRange {
   private final int startAddress;
   private final int length;
-  private ArrayList<Operand> data;
+  private final ArrayList<Operand> data;
 
   /**
    * Constructor for a data range
+   *
    * @param startAddress The first address of this region of memory
    * @param length The number of bytes in the region of memory.
    */
@@ -23,6 +24,7 @@ public class DataRange {
 
   /**
    * Gets the next available address after this region of memory.
+   *
    * @return the next available address
    */
   public int getNextAddress() {
@@ -30,7 +32,9 @@ public class DataRange {
   }
 
   /**
-   * Returns a memory operand that corresponds to the region in memory at the zero-indexed nth byte in this region of memory
+   * Returns a memory operand that corresponds to the region in memory at the zero-indexed nth byte
+   * in this region of memory
+   *
    * @param n
    * @return
    */
@@ -63,7 +67,7 @@ public class DataRange {
     return dataString.toString();
   }
 
-  public void appendData(Operand toBeAdded){
+  public void appendData(Operand toBeAdded) {
     data.add(toBeAdded);
   }
 }
